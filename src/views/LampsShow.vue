@@ -3,6 +3,7 @@
     <h1>Color: {{ lamp.color }}</h1>
     <p>Size: {{ lamp.size }}</p>
     <p>Price: ${{ lamp.price }}</p>
+    <router-link to="/lamps">Back to lamps</router-link>
 
 
   </div>
