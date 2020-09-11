@@ -1,10 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import LampsIndex from '../views/LampsIndex.vue'
+
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/lamps',
+    name: 'LampsIndex',
+    component: LampsIndex
+  },
   {
     path: '/',
     name: 'Home',
