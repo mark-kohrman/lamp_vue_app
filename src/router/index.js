@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import LampsIndex from '../views/LampsIndex.vue';
 import LampsShow from '../views/LampsShow.vue';
+import LampsNew from '../views/LampsNew.vue';
 
 
 
@@ -13,6 +14,11 @@ const routes = [
     path: '/lamps',
     name: 'LampsIndex',
     component: LampsIndex
+  },
+  {
+    path: '/lamps/new',
+    name: 'LampsNew',
+    component: LampsNew
   },
   {
     path: '/lamps/:id',
