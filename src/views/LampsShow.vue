@@ -4,7 +4,9 @@
     <p>Size: {{ lamp.size }}</p>
     <p>Price: ${{ lamp.price }}</p>
     <router-link to="/lamps">Back to lamps</router-link>
-
+    <div>
+    <router-link v-bind:to="`/lamps/${lamp.id}/edit`">Edit Lamp </router-link>
+    </div>
 
   </div>
 </template>

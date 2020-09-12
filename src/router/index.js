@@ -4,6 +4,7 @@ import Home from '../views/Home.vue';
 import LampsIndex from '../views/LampsIndex.vue';
 import LampsShow from '../views/LampsShow.vue';
 import LampsNew from '../views/LampsNew.vue';
+import LampsEdit from '../views/LampsEdit.vue';
 
 
 
@@ -24,6 +25,11 @@ const routes = [
     path: '/lamps/:id',
     name: 'LampsShow',
     component: LampsShow
+  },
+  {
+    path: '/lamps/:id/edit',
+    name: 'LampsEdit',
+    component: LampsEdit
   },
   {
     path: '/',
