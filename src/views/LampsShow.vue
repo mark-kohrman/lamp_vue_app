@@ -4,14 +4,15 @@
     <h1>Color: {{ lamp.color }}</h1>
     <p>Size: {{ lamp.size }}</p>
     <p>Price: ${{ lamp.price }}</p>
-    <router-link to="/lamps">Back to lamps</router-link>
-    <div>
-    <router-link v-bind:href="`/lamps/${lamp.id}/edit`">Edit Lamp </router-link>
-    </div>
-    <div>
-    <button v-on:click="destroyLamp()">Delete this bad boy</button>
-    </div>
 
+    <router-link to="/lamps">Back to lamps</router-link>
+
+    <div>
+      <router-link v-bind:href="`/lamps/${lamp.id}/edit`">Edit Lamp </router-link>
+    </div>
+    <div>
+      <p><button v-on:click="deleteLamp()">Delete the lamp</button></p>
+    </div>
 
   </div>
 </template>
@@ -41,11 +42,11 @@ export default {
         this.lamp = response.data;
       });
     },
-    destroyLamp: function () {
-      console.log("delete lamp, delete lamp!!!");
+    deleteLamp: function () {
+      console.log("delete the lamp");
       axios.delete(`/api/lamps/${this.$route.params.id}`).then((response) => {
         console.log(response.data);
-        this.$router.push("/lamps");
+        this.$router.push(`/lamps`);
       });
     },
   },
