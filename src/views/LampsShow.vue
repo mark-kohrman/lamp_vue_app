@@ -4,8 +4,10 @@
     <h1>Color: {{ lamp.color }}</h1>
     <p>Size: {{ lamp.size }}</p>
     <p>Price: ${{ lamp.price }}</p>
-
-    <router-link to="/lamps">Back to lamps</router-link>
+    <img v-bind:src="lamp.image_url">
+    <div>
+      <router-link to="/lamps">Back to lamps</router-link>
+    </div>
 
     <div>
       <router-link v-bind:href="`/lamps/${lamp.id}/edit`">Edit Lamp </router-link>
